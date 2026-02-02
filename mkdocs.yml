@@ -4,7 +4,7 @@ site_url: https://costbinne.github.io/obsidianVault/
 theme:
   name: material
 
-docs_dir: forthen_Vault/public
+docs_dir: forithen_Vault/public
 site_dir: site
 
 nav:
