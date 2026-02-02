@@ -1,0 +1,10 @@
+# Obsidian local settings
+.obsidian/
+
+# Inbox / drafts（如果你不想公开）
+00_INBOX/
+90_ARCHIVE/
+
+# OS junk
+.DS_Store
+Thumbs.db
