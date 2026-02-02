@@ -1,8 +1,11 @@
 site_name: Obsidian Vault
+site_url: https://costbinne.github.io/obsidianVault/
+
 theme:
   name: material
 
 docs_dir: docs
+site_dir: site
 
 nav:
-  - Home: GUIDE.md
+  - Home: index.md
