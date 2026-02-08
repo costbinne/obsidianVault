@@ -261,3 +261,285 @@ CSS代码
 ```
 ![[Pasted image 20260208195327.png]]
 
+### CSS中的盒子模型
+可以将下面代码用浏览器读取查看
+```
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>盒子模型演示</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 20px;
+
+            background-color: #f5f5f5;
+
+        }
+
+        .container {
+
+            display: flex;
+
+            gap: 20px;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+        }
+
+        .box {
+
+            width: 200px;
+
+            height: 150px;
+
+            background-color: lightblue;
+
+            border: 5px solid #333;
+
+            margin: 20px;
+
+            padding: 15px;
+
+        }
+
+        .box1 {
+
+            background-color: #ffcccc;
+
+            border: 8px solid #e74c3c;
+
+            padding: 10px;
+
+            margin: 15px;
+
+        }
+
+        .box2 {
+
+            background-color: #ccffcc;
+
+            border: 6px solid #27ae60;
+
+            padding: 20px;
+
+            margin: 10px;
+
+        }
+
+        .box3 {
+
+            background-color: #ccccff;
+
+            border: 10px solid #3498db;
+
+            padding: 5px;
+
+            margin: 25px;
+
+        }
+
+        .detailed-box {
+
+            width: 150px;
+
+            height: 100px;
+
+            background-color: #fff3cd;
+
+            border: 4px solid #856404;
+
+            padding: 12px;
+
+            margin: 30px;
+
+            position: relative;
+
+        }
+
+        .explanation {
+
+            max-width: 800px;
+
+            margin: 30px auto;
+
+            padding: 20px;
+
+            background-color: white;
+
+            border-radius: 8px;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">CSS 盒子模型演示</h1>
+
+    <div class="explanation">
+
+        <h2>什么是盒子模型？</h2>
+
+        <p>CSS盒子模型是网页布局的基础概念，它将每个HTML元素都看作一个矩形的"盒子"。</p>
+
+        <h3>盒子模型的四个组成部分：</h3>
+
+        <ol>
+
+            <li><strong>Content（内容）</strong> - 盒子的中心部分，显示文本、图像等内容</li>
+
+            <li><strong>Padding（内边距）</strong> - 内容与边框之间的空间，背景色/背景图会延伸到内边距</li>
+
+            <li><strong>Border（边框）</strong> - 围绕内容和内边距的边界</li>
+
+            <li><strong>Margin（外边距）</strong> - 盒子与其他元素之间的外部空间</li>
+
+        </ol>
+
+        <h3>盒子总宽度和高度计算公式：</h3>
+
+        <ul>
+
+            <li>总宽度 = width + 左右padding + 左右边框 + 左右margin</li>
+
+            <li>总高度 = height + 上下padding + 上下边框 + 上下margin</li>
+
+        </ul>
+
+    </div>
+
+  
+
+    <div class="container">
+
+        <div class="box box1">
+
+            <h3>盒子 1</h3>
+
+            <p>宽: 200px<br>
+
+               高: 150px<br>
+
+               边框: 8px<br>
+
+               内边距: 10px<br>
+
+               外边距: 15px</p>
+
+        </div>
+
+        <div class="box box2">
+
+            <h3>盒子 2</h3>
+
+            <p>宽: 200px<br>
+
+               高: 150px<br>
+
+               边框: 6px<br>
+
+               内边距: 20px<br>
+
+               外边距: 10px</p>
+
+        </div>
+
+        <div class="box box3">
+
+            <h3>盒子 3</h3>
+
+            <p>宽: 200px<br>
+
+               高: 150px<br>
+
+               边框: 10px<br>
+
+               内边距: 5px<br>
+
+               外边距: 25px</p>
+
+        </div>
+
+    </div>
+
+  
+
+    <div class="explanation">
+
+        <h2>实际例子分析</h2>
+
+        <p>以第一个盒子为例，其实际占用的空间为：</p>
+
+        <ul>
+
+            <li>内容宽度: 200px</li>
+
+            <li>左右内边距: 10px × 2 = 20px</li>
+
+            <li>左右边框: 8px × 2 = 16px</li>
+
+            <li>左右外边距: 15px × 2 = 30px</li>
+
+            <li><strong>总宽度: 200 + 20 + 16 + 30 = 266px</strong></li>
+
+        </ul>
+
+    </div>
+
+    <div class="explanation">
+
+        <h2>Box-sizing 属性</h2>
+
+        <p>默认情况下，width 和 height 设置的是 content 的尺寸。使用 <code>box-sizing: border-box</code> 可以让 width 和 height 包含 padding 和 border：</p>
+
+        <pre>
+
+/* 默认值 */
+
+element {
+
+  box-sizing: content-box;  /* width/height 只包含 content */
+
+}
+
+  
+
+/* 更直观的方式 */
+
+element {
+
+  box-sizing: border-box;   /* width/height 包含 content + padding + border */
+
+}
+
+        </pre>
+
+    </div>
+
+</body>
+
+</html>
+```
+#### 详细说明
+参考链接
+https://www.runoob.com/css/css-boxmodel.html
+![[Pasted image 20260208224127.png]]
+![[Pasted image 20260208224324.png]]
