@@ -10,6 +10,8 @@
 
 [[关于Oracle resource增强的整理]]
 
+---
+[[关于APP追加浏览器（Chrome）]]
 
 ---
 

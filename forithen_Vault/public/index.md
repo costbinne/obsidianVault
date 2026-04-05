@@ -30,3 +30,11 @@ https://slash-primula-e5d.notion.site/Schedule-of-2026-from-2026-02-07-2027-04-0
 ## 🧩 思考与方法
 关于决策、认知、框架、反思  
 👉 [[GUIDE_Thinking]]
+
+---
+
+## 🧩 Language Learning
+[[日语学习]]
+[[英语学习]]
+
+
