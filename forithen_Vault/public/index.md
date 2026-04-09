@@ -33,7 +33,8 @@ https://slash-primula-e5d.notion.site/Schedule-of-2026-from-2026-02-07-2027-04-0
 
 ---
 
-## 🧩 Language Learning
+## 🧩 Language Learning 
+目前暂定在 共享记事本上更新
 [[日语学习]]
 [[英语学习]]
 
